@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <form id="transactionForm">
+      <div
+        class="relative flex size-full min-h-screen flex-col bg-[#101a23] dark justify-between group/design-root overflow-x-hidden"
+        style='--select-button-svg: url(&apos;data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(144,174,203)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e&apos;); font-family: "Public Sans", "Noto Sans", sans-serif;'
+      >
+        <div>
+          <div class="flex items-center bg-[#101a23] p-4 pb-2 justify-between">
+            <div class="text-white flex size-12 shrink-0 items-center" data-icon="X" data-size="24px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">New Transaction</h2>
+          </div>
+          <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+            <label class="flex flex-col min-w-40 flex-1">
+              <p class="text-white text-base font-medium leading-normal pb-2">Date</p>
+              <div class="flex w-full flex-1 items-stretch rounded-xl">
+                <input
+                  name="date"
+                  placeholder="Select Date"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#314d68] bg-[#182734] focus:border-[#314d68] h-14 placeholder:text-[#90aecb] p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal"
+                  value=""
+                />
+                <div
+                  class="text-[#90aecb] flex border border-[#314d68] bg-[#182734] items-center justify-center pr-[15px] rounded-r-xl border-l-0"
+                  data-icon="Calendar"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </label>
+          </div>
+          <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+            <label class="flex flex-col min-w-40 flex-1">
+              <p class="text-white text-base font-medium leading-normal pb-2">Account</p>
+              <select
+                name="account1"
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#314d68] bg-[#182734] focus:border-[#314d68] h-14 bg-[image:--select-button-svg] placeholder:text-[#90aecb] p-[15px] text-base font-normal leading-normal"
+              >
+                <option value="one">Choose Account</option>
+                <option value="two">two</option>
+                <option value="three">three</option>
+              </select>
+            </label>
+          </div>
+          <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+            <label class="flex flex-col min-w-40 flex-1">
+              <p class="text-white text-base font-medium leading-normal pb-2">Debit</p>
+              <input
+                name="debit"
+                placeholder="Enter Debit"
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#314d68] bg-[#182734] focus:border-[#314d68] h-14 placeholder:text-[#90aecb] p-[15px] text-base font-normal leading-normal"
+                value=""
+              />
+            </label>
+          </div>
+          <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+            <label class="flex flex-col min-w-40 flex-1">
+              <p class="text-white text-base font-medium leading-normal pb-2">Account</p>
+              <select
+                name="account2"
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#314d68] bg-[#182734] focus:border-[#314d68] h-14 bg-[image:--select-button-svg] placeholder:text-[#90aecb] p-[15px] text-base font-normal leading-normal"
+              >
+                <option value="one">Choose Account</option>
+                <option value="two">two</option>
+                <option value="three">three</option>
+              </select>
+            </label>
+          </div>
+          <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+            <label class="flex flex-col min-w-40 flex-1">
+              <p class="text-white text-base font-medium leading-normal pb-2">Credit</p>
+              <input
+                name="credit"
+                placeholder="Enter Credit"
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#314d68] bg-[#182734] focus:border-[#314d68] h-14 placeholder:text-[#90aecb] p-[15px] text-base font-normal leading-normal"
+                value=""
+              />
+            </label>
+          </div>
+          <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+            <label class="flex flex-col min-w-40 flex-1">
+              <p class="text-white text-base font-medium leading-normal pb-2">Description</p>
+              <textarea
+                name="description"
+                placeholder="Enter Description"
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#314d68] bg-[#182734] focus:border-[#314d68] min-h-36 placeholder:text-[#90aecb] p-[15px] text-base font-normal leading-normal"
+              ></textarea>
+            </label>
+          </div>
+        </div>
+        <div>
+          <div class="flex px-4 py-3">
+            <button type="submit"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 flex-1 bg-[#0b80ee] text-white text-base font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Submit</span>
+            </button>
+          </div>
+          <div class="h-5 bg-[#101a23]"></div>
+        </div>
+      </div>
+    </form>
+    <script>
+// Replace with your actual Google Apps Script Web App URL
+const scriptURL = "https://script.google.com/macros/s/PASTE_YOUR_SCRIPT_ID_HERE/exec";
+const form = document.getElementById('transactionForm');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => alert("Thank you! Your form was submitted."))
+    .then(() => { form.reset(); })
+    .catch(error => alert('Error! ' + error.message));
+});
+    </script>
+  </body>
+</html>
